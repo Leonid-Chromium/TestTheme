@@ -1,0 +1,60 @@
+﻿<Window x:Class="TestTheme.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestTheme"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="300"/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Grid Grid.Column="0">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<GroupBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Header="Темы">
+				<StackPanel Orientation="Horizontal">
+					<Button x:Name="FirstResurs" Content="Перввый ресурс" Click="FirstResurs_Click"/>
+					<Button x:Name="SecondResurs" Content="Второй ресурс" Click="SecondResurs_Click"/>
+					<Button x:Name="MyResurs" Content="Мой ресурс" Click="MyResurs_Click"/>
+				</StackPanel>
+			</GroupBox>
+			<GroupBox Grid.Row="1" Grid.Column="0" Header="Автоматизация">
+				<StackPanel>
+					<Button x:Name="AutoChanger" Content="Авто изменение" Click="AutoChanger_Click"/>
+					<Button x:Name="AutoChangerStop" Content="Астанавитесь!" Click="AutoChangerStop_Click"/>
+				</StackPanel>
+			</GroupBox>
+			<GroupBox Grid.Row="1" Grid.Column="1" Header="Изменение">
+				<StackPanel>
+					<TextBox x:Name="ColoreTB"/>
+					<Button x:Name="SaveColor" Content="Сохранить" Click="SaveColor_Click"/>
+				</StackPanel>
+			</GroupBox>
+		</Grid>
+		<!--<StackPanel Grid.Column="0">
+			<Button x:Name="Update" Content="Обновление"/>
+		</StackPanel>-->
+		<Grid Grid.Column="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Rectangle x:Name="FirstRectangle" Fill="{DynamicResource 1SCB}"/>
+		</Grid>
+	</Grid>
+</Window>
